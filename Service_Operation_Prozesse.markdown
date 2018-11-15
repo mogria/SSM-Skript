@@ -34,16 +34,16 @@ Sollen wir das oben hier erwähnen?
 
 Incident Management befasst sich mit allen Ereignissen, die einen Service stören oder beeinflussen können, und ist verantwortlich für den gesamten Lebenszyklus aller Incidents.
 
-** Incident  
+* **Incident**  
   Ungeplante Unterbrechung oder Reduktion der Qualität eines IT-Services. z.B.
     * Fragen von Benutzern
     * Meldungen von IT-Mitarbeitern
     * Monitoring Events
 
-** Workarounds  
+* **Workarounds**  
    siehe Problem Management.
 
-** Incident Model  
+* **Incident Model**  
    Vordefinierte Vorgehensweise für eine bestimmte Art von ähnlichen oder auch gleichen Incidents.
 
 ### Aktivitäten
