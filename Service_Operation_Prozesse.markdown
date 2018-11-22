@@ -1,3 +1,12 @@
+<head>
+<meta charset="utf-8" >
+<style>
+body {
+    font-family: "Droid Sans", Arial, sans-serif;
+};
+</style>
+</head>
+
 # Service Operation Prozesse
 
 Die folgenden Service Operation Prozesse sind in ITIL definiert:
