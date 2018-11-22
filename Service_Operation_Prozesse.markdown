@@ -35,10 +35,15 @@ Sollen wir das oben hier erwähnen?
 Incident Management befasst sich mit allen Ereignissen, die einen Service stören oder beeinflussen können, und ist verantwortlich für den gesamten Lebenszyklus aller Incidents.
 
 * **Incident**  
-  Ungeplante Unterbrechung oder Reduktion der Qualität eines IT-Services. z.B.
+  Ungeplante Unterbrechung oder Reduktion der Qualität eines IT-Services. Zum Beispiel:
     * Fragen von Benutzern
     * Meldungen von IT-Mitarbeitern
     * Monitoring Events
+    * Ausfall einer Hard-Disk im RAID (auch ohne Service Unterbruch)
+
+
+* **Major Incident**  
+  Im Gegensatz zu einfachen Incidents haben diese besonders grosse Auswirkungen auf die Geschäftsprozesse und bedingen besondere Massnahmen bei der Service-Wiederherstellung.
 
 * **Workarounds**  
    siehe Problem Management.
@@ -46,9 +51,40 @@ Incident Management befasst sich mit allen Ereignissen, die einen Service störe
 * **Incident Model**  
    Vordefinierte Vorgehensweise für eine bestimmte Art von ähnlichen oder auch gleichen Incidents.
 
+### Abgrenzung zum Problem Management
+
+Ein Incident bleibt immer ein Incident, auch ein Major Incident. Es werden nur Symptome und Auswirkungen mittels eines Workarounds behoben. Sie werden höchstens zu einem Problem zugewiesen, welches die Grundlegende Ursache für ein oder mehrere Incidents ist.
+
 ### Aktivitäten
 
 ![Incident Management Prozesse](incident_management_activities.png)
+
+1. **Incident tritt auf**  
+  Das ein Incident auftritt heisst nicht umbedingt, dass dieser direkt auch identifiziert wird!
+2. **Incident identifizierung**  
+  Entweder durch auftreten, oder durch eine Meldung vom Anwender / Monitoring. Am besten bevor der Incident eine Auswirkung auf den Benutzer hat.
+3. **Incident Aufzeichnung**  
+  Alle Incidents sollen aufgezeichnet werden, da dies wichtig ist für den ganzen Prozess wie auch zur Messung der Prozess-Performance. Dies soll beinhalten:
+    * Zeit/Datum der Erfassung & Abschluss
+    * Eindeutige ID
+    * Status
+    * Kategorie / Kategorie bei Abschluss
+    * Dringlichkeit & Ausirkung
+    * Name des Erfassers und Kommunkationsart
+    * Name des Benutzers und Kommunkationsart
+    * Betroffene Configuration Items.
+    * Verlinke Problems / Known Errors
+    * Durchgeführte Massnahmen zur Behebung
+    * Personenen/Rolle welcher Incident bearbeitet
+* **Statusverfolgung**  
+  Der Status soll gepflegt werden & vereinfacht die Handhabung. Typische Stati sind (je nach festlegung)
+  * *Offen*: Noch nicht zugeordnet
+  * *In Arbeit*
+  * *Gelöst*: Incident wurde behoben, Lösung jedoch nicht bestätigt.
+  * *Solved*: Incident ist abgeschlossen & Lösung wurde durch Anwender bestätigt.
+* **Incident Priorisierung**  
+  Incidents werden Priorisiert nach *Auswirkung* auf das Business des Kunden und nach *Dinglichkeit*.wie schnell der Service wieder hergestellt werden muss. Es braucht hier klare Richtlinien und Praxisbeispiele für die Mitarbeiter, um die Priorisierung korrekt vorzunehmen.  
+  Die Priorisierung legt lediglich die Reihenfolge der Abarbeitung fest.
 
 ## Request Fulfillment
 
