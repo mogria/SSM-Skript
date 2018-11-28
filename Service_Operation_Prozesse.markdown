@@ -1,6 +1,6 @@
 ---
 title: Service Operation Prozesse
-author: Elia Griffo, Moritz Küttel
+author: Elia Grifo, Moritz Küttel
 header-includes: |
     \usepackage{fancyhdr}
     \usepackage{graphicx}
