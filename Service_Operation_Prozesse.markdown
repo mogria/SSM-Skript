@@ -8,7 +8,7 @@ header-includes: |
     \pagestyle{fancy}
     \fancyhead[RO]{SSM}
     \fancyfoot[CO,CE]{\thepage}
-    \floatplacement{figure}{!hb}
+    \floatplacement{figure}{H}
 geometry: margin=1in
 font: "Droid Sans"
 extensions: raw_html
@@ -71,8 +71,7 @@ Ein Incident bleibt immer ein Incident, auch ein Major Incident. Es werden nur S
 
 ### Aktivitäten
 
-![Incident Management Prozesse](incident_management_activities.png){ width=50% }\ 
-
+![Incident Management Prozesse](incident_management_activities.png){ width=50% }/
 
 1. **Incident tritt auf**  
   Das ein Incident auftritt heisst nicht umbedingt, dass dieser direkt auch identifiziert wird!
@@ -208,35 +207,53 @@ Ziel des Problem Management ist die Vermeidung von Incidents. Z.B. Das die gleic
 
 ## Access Management
 
-Das Access Management ist Verantwortlich für die Verwaltung der Zugriffsrechte.
+Das Access Management ist Verantwortlich für die Verwaltung der
+Zugriffsrechte. Ziel ist es, das Anwender Services oder Servicegruppen
+nutzen können, aber nur falls sie dazu berechtigt sind, unter
+Berücksichtigung der Information Security wie auch dem Availability
+Management. Das Access Management entscheidet selber nicht über die
+Berechtigungen die vergeben werden, sondern setzt lediglich die Vorgaben
+aus der Service Strategy und des Service Designs um, basierend auf den
+Anforderungen des Unternehmens.
 
-* **Identität**  
-  Das Access Management setzt voraus, dass die Anwender korrekt identifiziert werden können und der Status innerhalb der Organisation verifiziert werden kann.
-  * **Aktivitäten**
-    * Verifikation der Identität  
-      Um Rechte vergeben zu können, muss erst die Identität des Benutzers verifiziert werden.
-      Ist der Anwender derjenige der er vorgibt zu sein? Wird z.B. überprüft über Benutzername/Passwort, oder SmartCards
-      Darf er die Angeforderten Berechtigungen erhalten?
+### Identität
+Das Access Management setzt voraus, dass die Anwender korrekt
+identifiziert werden können und der Status innerhalb der Organisation
+verifiziert werden kann.
 
-    * Überwachung des Identiätsstatus  
-      Die Rolle eines Mitarbeiters innerhalb einer Organisation kann sich ändern oder der Mitarbeiter kann auch die Organisation verlassen.
+#### Aktivitäten
 
-* **Rechte**  
-  ...
-  * **Aktivitäten**
-    * Rechte vergeben  
-      Autorisierten Benutzern wird Zugriff auf Services oder Daten gewährt.
-    * Rechte entfernen oder einschränken
-      
+* **Verifikation der Identität**  
+  Um Rechte vergeben zu können, muss erst die Identität des Benutzers
+  verifiziert werden.
+  * Ist der Anwender derjenige der er vorgibt zu sein? Es wird zum Beispiel überprüft
+  über Benutzername/Passwort, oder SmartCards
+  * Darf er die Angeforderten Berechtigungen erhalten?
 
-* **Zugriff**  
-  ...
-  * **Aktivitäten**
-    * Zugriff anfordern  
-      ....
-    * Protokollieren und Überwachen  
-      Die Vergebenen Rechte und deren Nutzung wird aktiv überwacht, um Missbrauch oder Veränderungungen
-      in der Organisation, sollen die Berechtigungen dementsprechend entzogen oder angepasst werden.
+* **Überwachung des Identiätsstatus**  
+  Die Rolle eines Mitarbeiters innerhalb einer Organisation kann sich ändern oder der Mitarbeiter kann auch die Organisation verlassen. Auf solche Veränderungen muss auch reagiert werden.
 
 
+### Zugriff
+
+Der Zugriff beschreibt, das komplette Ausmass an Rechten eines Benutzer an einem Service oder Daten hat.
+
+#### Aktivitäten
+
+* **Zugriff anfordern**  
+  Zugriff kann von Benutzern z.B. durch eine Service Request an das Requestfulfilment angefordert werden.
+* **Protokollieren und Überwachen**  
+  Die Vergebenen Rechte und deren Nutzung wird aktiv überwacht, um Missbrauch oder Veränderungen
+  in der Organisation, sollen die Berechtigungen dementsprechend entzogen oder angepasst werden.
+
+### Rechte
+
+Die Rechte sind die effektiven Berechtigungen die ein Benutzer oder Gruppe auf bestimmte Services oder Daten _im Detail_ hat. (z.B. lesen, schreiben, löschen, ausführen) Hat der Benutzer keinen Zugriff, können auch keine Rechte vergeben werden.
+
+#### Aktivitäten
+
+* **Rechte vergeben**  
+  Autorisierten Benutzern wird die Berechtigung auf spezifische Services oder Daten _im Detail_ gewährt. 
+* **Rechte entfernen oder einschränken**  
+  Rechte sollen auch wieder entfernt oder eingeschränkt werden werden, z.B. auf Anfragen von Benutzern oder aufgrund der Überwachung des Identitätsstatus (siehe oben)
 
