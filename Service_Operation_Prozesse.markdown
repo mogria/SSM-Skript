@@ -12,7 +12,7 @@ header-includes: |
 abstract: "In diesem Dokument betrachten wir die Service Operation Prozesse Incident Management, Request Fulfillment, Problem Management und Access Management wie in ITIL definiert.
 
 Jeder Dieser Prozesse ist in einem Kaptiel beschrieben."
-geometry: margin=1in
+geometry: margin=0.95in
 mainfont: Gentium Basic
 mainfontoptions: BoldFont=Gentium Basic Bold
 mainfontoptions: ItalicFont=Gentium Basic Italic
@@ -50,6 +50,14 @@ den gesamten Lebenszyklus aller Incidents. Wichtige Begriffe und Rollen sind:
 
 * **Incident Models**:
   Vordefinierte Vorgehensweise für eine bestimmte Art von ähnlichen oder auch gleichen Incidents.
+
+* **Incident Manager**
+  Der Incident Manager ist verantwortlich für die Erstellung und Weiterentwicklung des Incident Management Prozesses. 
+  Weitere Aufgaben beinhalten:
+    * Überwachung der Effektiviät des Prozesses, und kontinuierliche Verbesserung
+    * Steuerung der Support Teams und Auswahl und Integration der benötigten Werkzeuge
+    * Hierarchische Eskalationsinstanz und Steuerung der Durchführung von Major Incidents
+    * Management Reporting
 
 * **Service Desk / 1st Line Support **:
   Nimmt Anrufe entgegen und bearbeitet Meldungen, nach den unten definierten Aktivitäten.
@@ -160,6 +168,18 @@ Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen 
   Massnahmen. Es kann auch die Anwenderzufriedenheit abgefragt werden,
   jedoch gut dosiert, da man sonst auf Unmut stossen könnte.
 
+### Key Performance Indikatoren (KPI)
+
+Mögliche Kennzahlen zur Messung der Performance des Incident Management Prozesses sind:
+
+* Incidents pro Status
+* Durchschnittliche Kosten pro Incident
+* Anzahl Major Incidents im Verhältnis zur Anzahl Incidents
+* Anteil der innerhalb der SLAs behobenen Störungen
+* Anteil der Incidents, die wiedereröffnet wurden
+* Anteil falsch kategorisierter oder falsch zugewiesener Incidents
+* Erstlösungsrate
+
 ## Request Fulfilment
 
 Das Request Fulfilment setzt sich mit Anwenderanfragen verschiedenster Natur auseinander. Beispiele dafür sind:
@@ -244,12 +264,18 @@ Folgendes sind Beispiele für mögliche Kennzahlen, an denen sich die Prozessqua
 
 ### Herausforderungen
 
-Für einen erfolgreichen Prozess muss gewährleistet werden, dass alle Anfragen tatsächlich zu diesem Prozess zuzuordnen sind. Es braucht klare Kriterien bei der Kategorisierung von Incidents und Service Requests.
-Bei Anforderungen neuer Komponenten oder deren Umzug gibt es oft verschiedenste Lösungen, welche identifiziert und durch die Prozesse des Request Fulfilment ersetzt werden sollten.
+Für einen erfolgreichen Prozess muss gewährleistet werden, dass alle
+Anfragen tatsächlich zu diesem Prozess zuzuordnen sind. Es braucht klare
+Kriterien bei der Kategorisierung von Incidents und Service Requests.
+Bei Anforderungen neuer Komponenten oder deren Umzug gibt es oft
+verschiedenste Lösungen, welche identifiziert und durch die Prozesse
+des Request Fulfilment ersetzt werden sollten.
 
 ## Problem Management
 
-Ziel des Problem Management ist die Vermeidung von Incidents. Z.B. Das die gleichen Incidents nicht mehrmals auftreten, oder gar nicht auftreten können.
+Ziel des Problem Management ist die Vermeidung von Incidents. Z.B. Das
+die gleichen Incidents nicht mehrmals auftreten, oder gar nicht auftreten
+können.
 
 ### Begriffe
 
@@ -278,19 +304,19 @@ _Reaktives Problem Management_, befasst sich mit der Identifikation, Analyse und
 * **Untersuchung und Diagnose (Investigation and diagnosis)**: Es werden Ressourcen entsprechend der Priorisierung und Kategorisierung zusammengestellt und die Ursache diagnostiziert
 * **Known Error dokumentieren (raising a known error)**: Entdeckte Workarounds werden in der Known Error Database dokumentiert und stehen anderen Prozessen zur Verfügung
 * **Problemlösung**
-  *   Identifizierte Ursachen werden bewertet – passende Lösungen werden gesucht
-  *   Festgelegte Lösungen können nun implementiert werden, sofern kein anderer Service beeinträchtig wird und Ressourcen zur Verfügung stehen
-  *   Angestrebte Lösung sollte deshalb mit einem RFC genehmigt werden
+  * Identifizierte Ursachen werden bewertet – passende Lösungen werden gesucht
+  * Festgelegte Lösungen können nun implementiert werden, sofern kein anderer Service beeinträchtig wird und Ressourcen zur Verfügung stehen
+  * Angestrebte Lösung sollte deshalb mit einem RFC genehmigt werden
 * **Problem abschliessen**
-  *   Problem Record wird aktualisiert und formal abgeschlossen
-  *   Known Error Record wird geupdatet
+  * Problem Record wird aktualisiert und formal abgeschlossen
+  * Known Error Record wird geupdatet
   * Verlinkte Incident Tickets werden ebenfalls geschlossen
 
 ### Rollen
 
 * **Problem Manager**
   * Verantwortlich für einen funktionierenden Prozess, Effektivität und Effizienz
-  * Weitere Aufgaben: Management Reporting, Pflege der Knowns Error Database, Formaler Abschluss der Problem Records etc.
+  * Weitere Aufgaben: Management Reporting, Pflege der Known Error Database, Formaler Abschluss der Problem Records etc.
 * **Problem Solving Groups**
   * Werden in Bezug zum jeweiligen Problem vom Problem Manager zusammengestellt und führen Diagnose und Lösungssuche durch
   * Bestehen aus internen und externen Spezialisten
@@ -314,7 +340,7 @@ Es ist unerlässlich, dass die Schnittstelle zwischen Incident- und Problem-Mana
 
 Das Access Management ist Verantwortlich für die Verwaltung der
 Zugriffsrechte. Ziel ist es, das Anwender Services oder Servicegruppen
-nutzen können, aber nur falls sie dazu berechtigt sind, unter
+nutzen können, falls diese dazu berechtigt sind, unter
 Berücksichtigung der Information Security wie auch dem Availability
 Management.
 
@@ -364,3 +390,11 @@ Die Rechte sind die effektiven Berechtigungen die ein Benutzer oder Gruppe auf b
 * **Rechte entfernen oder einschränken**:
   Rechte sollen auch wieder entfernt oder eingeschränkt werden werden, z.B. auf Anfragen von Benutzern oder aufgrund der Überwachung des Identitätsstatus (siehe oben)
 
+
+### Key Performance Indikatoren (KPI)
+
+Beispiele für mögliche Kennzahlen sind:
+
+ * Anzahl der Anfragen zur Vergabe von Rechten
+ * Anzahl der Anpassungen aufgrund identifizierter Rollenänderungen
+ * Anzahl der Incidents aufgrund veränderter Berechtigungen
