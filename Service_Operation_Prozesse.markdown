@@ -104,7 +104,7 @@ Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen 
     * Dringlichkeit & Ausirkung
     * Name des Erfassers und Kommunkationsart
     * Name des Benutzers und Kommunkationsart
-    * Betroffene Configuration Items.
+    * Betroffene Configuration Items
     * Verlinkte Problems / Known Errors
     * Durchgeführte Massnahmen zur Behebung
     * Personen/Rolle welcher Incident bearbeitet
