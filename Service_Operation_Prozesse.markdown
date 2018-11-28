@@ -12,7 +12,7 @@ header-includes: |
 abstract: "In diesem Dokument betrachten wir die Service Operation Prozesse Incident Management, Request Fulfillment, Problem Management und Access Management wie in ITIL definiert.
 
 Jeder Dieser Prozesse ist in einem Kaptiel beschrieben."
-geometry: margin=0.75in
+geometry: margin=1in
 mainfont: Gentium Basic
 mainfontoptions: BoldFont=Gentium Basic Bold
 mainfontoptions: ItalicFont=Gentium Basic Italic
@@ -23,7 +23,7 @@ mainfontoptions: BoldItalicFont=Gentium Basic Bold Italic
 
 Incident Management befasst sich mit allen Ereignissen, die einen
 Service stören oder beeinflussen können, und ist verantwortlich für
-den gesamten Lebenszyklus aller Incidents. Wichtige Begriffe sind:
+den gesamten Lebenszyklus aller Incidents. Wichtige Begriffe und Rollen sind:
 
 * **Incident**:
   Ungeplante Unterbrechung oder Reduktion der Qualität eines IT-Services. Zum Beispiel:
@@ -31,22 +31,22 @@ den gesamten Lebenszyklus aller Incidents. Wichtige Begriffe sind:
     * Meldungen von IT-Mitarbeitern
     * Monitoring Events
     * Ausfall einer Hard-Disk im RAID (auch ohne Service Unterbruch)
+
   In der Praxis entspricht dies einem Ticket.
 
-  Wiedereröffnung eines Tickets will man grundsätzlich vermeiden. Jedoch
-  können Situationen in der Praxis auftreten, in denen dies
-  sinnvoll ist. Es benötigt, jedoch klare Regeln, wann ein Incident
+  Die Wiedereröffnung eines Tickets sollte grundsätzlich vermieden
+  werden. Jedoch können Situationen in der Praxis auftreten, in denen dies
+  sinnvoll ist. Es benötigt jedoch klare Regeln, wann ein Incident
   wiedereröffnet wird und wann es sich um einen neuen Incident handelt.
 
 * **Major Incident**:
-  Im Gegensatz zu einfachen Incidents haben diese besonders grosse
-  Auswirkungen auf die Geschäftsprozesse und bedingen besondere
+  Im Gegensatz zu einfachen Incidents haben Major Incidents besonders
+  grosse Auswirkungen auf die Geschäftsprozesse und bedingen besondere
   Massnahmen bei der Service-Wiederherstellung.
 
-* **Workarounds**:
-  Siehe Problem Management.
+* **Workaround**: Massnahme zur Reduzierung der Auswirkungen eines Incidents, solange keine endgültige Lösung verfügbar ist.
 
-* **Timescales**: Anhand des SLAs werden für die einzelnen Aktivitäten eines Indicents Zeiten vereinbart, welche im OLA festgehalten werden.
+* **Timescales**: Anhand des SLAs werden für die einzelnen Aktivitäten eines Incidents Zeiten vereinbart, welche im OLA festgehalten werden.
 
 * **Incident Models**:
   Vordefinierte Vorgehensweise für eine bestimmte Art von ähnlichen oder auch gleichen Incidents.
@@ -67,20 +67,26 @@ den gesamten Lebenszyklus aller Incidents. Wichtige Begriffe sind:
 
 ### Abgrenzung zum Problem Management
 
-Ein Incident bleibt immer ein Incident, auch ein Major Incident. Es werden nur Symptome und Auswirkungen mittels eines Workarounds behoben. Sie werden höchstens zu einem Problem zugewiesen, welches die grundlegende Ursache für ein oder mehrere Incidents ist.
+Ein Incident bleibt immer ein Incident, auch ein Major Incident. Es werden
+nur Symptome und Auswirkungen mittels eines Workarounds behoben. Sie
+werden höchstens zu einem Problem zugewiesen, welches die grundlegende
+Ursache für ein oder mehrere Incidents ist.
 
-Jedoch ist es sehr wichtig für einen funktionierenden Incident Management Prozess, dass Informationen wie Errors und Workarrounds aus dem Problem Management Prozess zur Verfügung stehen, um aus vergangenen Incidents zu lernen und sinnvolle Workarounds einzusetzen.
+Jedoch ist es sehr wichtig für einen funktionierenden Incident Management
+Prozess, dass Informationen wie Errors und Workarounds aus dem Problem
+Management Prozess zur Verfügung stehen, um aus vergangenen Incidents
+zu lernen und sinnvolle Workarounds einzusetzen.
 
 ### Aktivitäten
 
-Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen unterscheiden. Folgende Aktivitäten bieten aber einen guten Rahmen für die Gestaltung eines Incident Mangement Prozesses.
+Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen unterscheiden. Folgende Aktivitäten bieten aber einen guten Rahmen für die Gestaltung eines Incident Management Prozesses:
 
 ![Incident Management Prozesse](incident_management_activities.png){ width=50% }
 
 1. **Incident tritt auf**:
-  Wenn ein Incident auftritt, heisst nicht umbedingt, dass dieser direkt auch identifiziert wird!
+  Wenn ein Incident auftritt, heisst nicht unbedingt, dass dieser direkt auch identifiziert wird.
 2. **Incident identifizierung**:
-  Entweder durch auftreten, oder durch eine Meldung vom Anwender / Monitoring. Je früher man Fehler entdecken kann, desto schneller können Fehler beseitigt werden & der Anwender bekommt dies im besten Fall nicht einmal mit.
+  Entweder durch auftreten, oder durch eine Meldung vom Anwender oder des Monitorings. Je früher man Fehler entdecken kann, desto schneller können Fehler beseitigt werden. Der Anwender bekommt dies im besten Fall nicht einmal mit.
 3. **Incident Aufzeichnung**:
   Alle Incidents sollen aufgezeichnet werden, da dies wichtig ist für den ganzen Prozess wie auch zur Messung der Prozess-Performance. Dies soll beinhalten:
     * Zeit/Datum der Erfassung & Abschluss
@@ -93,18 +99,18 @@ Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen 
     * Betroffene Configuration Items.
     * Verlinkte Problems / Known Errors
     * Durchgeführte Massnahmen zur Behebung
-    * Personenen/Rolle welcher Incident bearbeitet
+    * Personen/Rolle welcher Incident bearbeitet
 4. **Statusverfolgung**:
-  Der Status soll gepflegt werden & vereinfacht die Handhabung. Typische Stati sind: 
+  Der Status soll gepflegt werden & vereinfacht die Handhabung. Typische Stati sind:  
   *Offen*: Noch nicht zugeordnet  
-  *In Arbeit*  
+  *In Arbeit*  Der Incident wird bearbeitet.  
   *Gelöst*: Incident wurde behoben, Lösung jedoch nicht bestätigt.  
   *Solved*: Incident ist abgeschlossen & Lösung wurde durch Anwender bestätigt.
 5. **Kategorisierung**:
   Eine Kategorisierung wird vorgenommen, damit der Incident von den
   dafür zuständigen Mitarbeitern direkt verarbeitet werden kann. Keine
   Kategorisierung oder eine Fehlkategorisierung kann zu Mehraufwand,
-  z.B. durch Weiterleitungen führen.
+  z.B. durch mehrfaches weiterleiten führen.
 6. **Priorisierung**:
   Incidents werden Priorisiert nach *Auswirkung* auf das Business
   des Kunden und nach *Dinglichkeit* wie schnell der Service wieder
@@ -114,13 +120,13 @@ Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen 
   Die Priorisierung legt lediglich die Reihenfolge der Abarbeitung fest.
 7. **Initiale Diagnose**:
   Nach dem Erfassen des Incidents und dessen Symptome, wird direkt
-  versucht eine schnelle Lösung zu finden. Dies ist z.B. der Job
-  des Service Desks, der noch direkt am Telefon mit dem Kunden
+  versucht eine schnelle Lösung zu finden. Dies ist der Job
+  des Service Desks, der z.B. noch direkt am Telefon mit dem Kunden
   versucht durch z.B. Fragebäume oder Wissensdatenbanken oder der Known
-  Error Datebase das Problem zu lösen. Im besten Fall, wenn der Anwender
+  Error Database das Problem zu lösen. Im besten Fall, wenn der Anwender
   die Lösung akzeptiert, kann der Incident direkt abgeschlossen werden.
 8. **Eskalation**:
-  Bei des Eskalation handelt es sich um Weitergabe des Incidents an eine andere Instanz, um dort jeweils weitere Aktivitäten durchzuführen. Es wird hier grundsätzlich zwischen zwei Arten unterschieden.  
+  Bei des Eskalation handelt es sich um die Weitergabe des Incidents an eine andere Instanz, um dort jeweils weitere Aktivitäten durchzuführen. Es wird hier grundsätzlich zwischen zwei Arten unterschieden.  
   _Funktionale Eskalation_:
     Weitergabe z.B. aufgrund von fehlendem Wissen, Fähigkeiten oder
     Experitise. Aber auch anhand der Zuständigkeit der zugewiesenen
@@ -143,7 +149,7 @@ Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen 
   In dieser Aktivität werden die Massnahmen zur Wiederherstellung des
   Services durchgeführt, nachdem eine potenzielle Lösung identifiziert
   wurde. Dies kann durch den Anwender selbst, durch den Service-Desk, ein
-  internes Support-Team oder sogar durch externe Lieferanten geschehen.
+  internes Support-Team oder auch durch externe Lieferanten geschehen.
 9. **Incident abschliessen**
   Hier wird durch den Service Desk sichergestellt, dass der Fehler wirklich
   behoben wurde und der Anwender die Lösung akzeptiert (Kann auch durch
@@ -156,84 +162,85 @@ Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen 
 
 ## Request Fulfilment
 
-Request Fulfilment setzt sich mit Anwenderanfragen verschiedenster Natur auseinander. 
-Beispiele sind:
-*   Umzüge von Anwendersystemen oder Anfragen bezüglich zusätzlicher Informationen
-*   Passwort zurücksetzen
-*   Unterstützung bei der Nutzung von Services
-  
+Das Request Fulfilment setzt sich mit Anwenderanfragen verschiedenster Natur auseinander. Beispiele dafür sind:
+
+* Umzüge von Anwendersystemen oder Anfragen bezüglich zusätzlicher Informationen
+* Passwort zurücksetzen
+* Unterstützung bei der Nutzung von Services
+
 ### Ziele
-*	Kanal für Bestellung und Bezug von «Standardleistungen» bereitstellen
-*	Informationen zu beziehbaren Leistungen und deren Bezugsweg verfügbar machen
-*	Beschwerden entgegennehmen und verarbeiten
-*	Angebotene Standardleistungen haben definierte Genehmigungswege und Prozesse
-*	Andere Prozesse wie Incident- oder Change-Management entlasten
+
+* Kanal für Bestellung und Bezug von «Standardleistungen» bereitstellen
+* Informationen zu beziehbaren Leistungen und deren Bezugsweg verfügbar machen
+* Beschwerden entgegennehmen und verarbeiten
+* Angebotene Standardleistungen haben definierte Genehmigungswege und Prozesse
+* Andere Prozesse wie Incident- oder Change-Management entlasten
 
 ### Begriffe
-*	Service Request
-    *	Anfrage eines Anwenders nach Informationen, Beratung, Support, Standard-Change oder nach Zugriff auf IT-Service
-    *	Meist direkt am Service Desk bearbeitet
-    *	Oft sehr einfache, risikoarme und schnell zu bearbeitende Anfragen
-*	Menüauswahl (Menue selection)
-    *	Abrufmöglichkeit der gewünschten Leistungen anhand definierter Menüauswahl
-    *	Kann innerhalb des Servicemanagement-Tools abgebildet werden
-    *	Bei Fehlen eines solchen Tools kann ein Katalog oder eine Anforderung beim Service Desk Abhilfe schaffen
-*	Statusüberwachung (request status tracking)
-    *	Zuverlässige Überwachung der Request-Status
-    *	Mögliche Status Codes: Draft, In Review, Abgelehnt, Fertiggestellt etc.
-*	Koordination der Ausführung (coordination of fulfilment activities)
-    *	Tatsächliche Ausführung abhängig von der Art der Anfrage
-    *	Häufig direkt durch Service-Desk-Mitarbeiter, aber es können auch weitere Personen und Rollen miteinbezogen werden (z.B. Facility Mgmt. für Umzüge)
+* **Service Request**
+  * Anfrage eines Anwenders nach Informationen, Beratung, Support, Standard-Change oder nach Zugriff auf IT-Service
+  * Meist direkt am Service Desk bearbeitet
+  * Oft sehr einfache, risikoarme und schnell zu bearbeitende Anfragen
+* **Menüauswahl (Menue selection)**
+  * Abrufmöglichkeit der gewünschten Leistungen anhand definierter Menüauswahl
+  * Kann innerhalb des Servicemanagement-Tools abgebildet werden
+  * Bei Fehlen eines solchen Tools kann ein Katalog oder eine Anforderung beim Service Desk Abhilfe schaffen
+* **Statusüberwachung (request status tracking)**
+  * Zuverlässige Überwachung der Request-Status
+  * Mögliche Status Codes: Draft, In Review, Abgelehnt, Fertiggestellt etc.
+* **Koordination der Ausführung (coordination of fulfilment activities)**
+  * Tatsächliche Ausführung abhängig von der Art der Anfrage
+  * Häufig direkt durch Service-Desk-Mitarbeiter, aber es können auch weitere Personen und Rollen miteinbezogen werden (z.B. Facility Mgmt. für Umzüge)
 
 ### Aktivitäten
 Der Prozess besteht aus den folgenden Aktivitäten:
 
-*	Request annehmen (receive request)
-    *	Arbeiten erst beginnen, wenn die formale Anfrage beim Service Provider eingeht
-    *	Vordefinierte Templates nutzen falls möglich, um Aufwand gering zu halten
-    *	Beurteilung, ob es tatsächlich ein Request ist und nicht etwa ein Incident
-*	Logging und Validierung (request logging and validation)
-    *	Requests müssen vollständig erfasst und mit Zeitstempel versehen werden
-    *	Wichtige Informationen sind: Kategorie, Zeitstempel, Anwender, Dringlichkeit, Priorität, Status, Beschreibung etc.
-*	Kategorisierung (request categorization)
-    *	Beschreibt, um welche Art von Request es sich handelt
-    *	Wichtig für spätere Reports zur Nutzung der Services und Planung der Ressourcen
-    *	Beispiele: Nach Service, nach Aktivitäten, nach CI Typ
-*	Priorisierung (request priorization)
-    *	Legt die Reihenfolge der Abarbeitung der Requests fest
-    *	Setzt sich zusammen aus der Auswirkung auf das Business und der Dringlichkeit
-*	Autorisierung (request authorization)
-    *	Jeder Request braucht vor der Ausführung eine Autorisierung
-    *	Kann je nach Fall unterschiedlich ablaufen
-    *	Falls keine Autorisierung möglich ist, folgt eine Begründung an den Anwender
-*	Review (request review)
-    *	Überprüfung, welche Funktion für die Durchführung verantwortlich ist
-    *	Requests, die nicht direkt im Service Desk bearbeitet werden können, werden weitergeleitet und überwacht
-*	Durchführung (request model execution)
-    *	Die Durchführung erfolgt durch die zugewiesene Funktion anhand vorgegebener Request Models – so wird die Wiederholbarkeit und Konsistenz gewährleistet
-*	Abschluss (request closure)
-    *	Nach Beendigung der Aktivitäten wird der Request über den Service Desk abgeschlossen
-    *	Anwender werden informiert und die Aktivitäten dokumentiert
+* **Request annehmen (receive request)**
+  * Arbeiten erst beginnen, wenn die formale Anfrage beim Service Provider eingeht
+  * Vordefinierte Templates nutzen falls möglich, um Aufwand gering zu halten
+  * Beurteilung, ob es tatsächlich ein Request ist und nicht etwa ein Incident
+* **Logging und Validierung (request logging and validation)**
+  * Requests müssen vollständig erfasst und mit Zeitstempel versehen werden
+  * Wichtige Informationen sind: Kategorie, Zeitstempel, Anwender, Dringlichkeit, Priorität, Status, Beschreibung etc.
+* **Kategorisierung (request categorization)**
+  * Beschreibt, um welche Art von Request es sich handelt
+  * Wichtig für spätere Reports zur Nutzung der Services und Planung der Ressourcen
+  * Beispiele: Nach Service, nach Aktivitäten, nach CI Typ
+* **Priorisierung (request priorization)**
+  * Legt die Reihenfolge der Abarbeitung der Requests fest
+  * Setzt sich zusammen aus der Auswirkung auf das Business und der Dringlichkeit
+* **Autorisierung (request authorization)**
+  * Jeder Request braucht vor der Ausführung eine Autorisierung
+  * Kann je nach Fall unterschiedlich ablaufen
+  * Falls keine Autorisierung möglich ist, folgt eine Begründung an den Anwender
+* **Review (request review)**
+  * Überprüfung, welche Funktion für die Durchführung verantwortlich ist
+  * Requests, die nicht direkt im Service Desk bearbeitet werden können, werden weitergeleitet und überwacht
+* **Durchführung (request model execution)**
+  * Die Durchführung erfolgt durch die zugewiesene Funktion anhand vorgegebener Request Models – so wird die Wiederholbarkeit und Konsistenz gewährleistet
+* **Abschluss (request closure)**
+  * Nach Beendigung der Aktivitäten wird der Request über den Service Desk abgeschlossen
+  * Anwender werden informiert und die Aktivitäten dokumentiert
 
 ### Rollen
-*	Service-Desk-Mitarbeiter
-    *	Nehmen die initiale Bearbeitung vor
-    *	Führen einfache Service Requests direkt aus
-*	Service-Operation-Teams und externe Lieferanten
-    *	Erfordern Service Requests weitere Aktivitäten werden diese von internen Teams oder Dienstleistern ausgeführt
-*	Facility Management, Einkauf und weiter Abteilungen
-    *	Sind bei der Erfüllung der Requests eingebunden und unterstützen bei Bedarf (Übernahme von Aktivitäten oder Freigaben)
-*	Dedizierte Support-Teams
-    *	Für Ausnahmefälle zuständig: Grosse Zahl von Reqeusts oder kritische Anfrage müssen abgearbeitet werden
+* **Service-Desk-Mitarbeiter**
+  * Nehmen die initiale Bearbeitung vor
+  * Führen einfache Service Requests direkt aus
+* **Service-Operation-Teams und externe Lieferanten**
+  * Erfordern Service Requests weitere Aktivitäten werden diese von internen Teams oder Dienstleistern ausgeführt
+* **Facility Management, Einkauf und weiter Abteilungen**
+  * Sind bei der Erfüllung der Requests eingebunden und unterstützen bei Bedarf (Übernahme von Aktivitäten oder Freigaben)
+* **Dedizierte Support-Teams**
+  * Für Ausnahmefälle zuständig: Grosse Zahl von Reqeusts oder kritische Anfrage müssen abgearbeitet werden
 
 ### Key-Performance-Indikatoren (KPI)
 Folgendes sind Beispiele für mögliche Kennzahlen, an denen sich die Prozessqualität messen lassen:
 
-*	Gesamtzahl der Service Requests
-*	Anteil offener Requests, die auf Bearbeitung warten
-*	Durchschnittliche Zeit für die Bearbeitung
-*	Anteil Requests, die in vorgesehener Zeit abgeschlossen wurden
-*	Durchschnittliche Kosten für die Durchführung
+* Gesamtzahl der Service Requests
+* Anteil offener Requests, die auf Bearbeitung warten
+* Durchschnittliche Zeit für die Bearbeitung
+* Anteil Requests, die in vorgesehener Zeit abgeschlossen wurden
+* Durchschnittliche Kosten für die Durchführung
 
 ### Herausforderungen
 
@@ -246,66 +253,58 @@ Ziel des Problem Management ist die Vermeidung von Incidents. Z.B. Das die gleic
 
 ### Begriffe
 
-*	Problem
-    *   Unbekannte Ursache eines oder mehrerer Incidents
-*	Workaround
-    *   Massnahme zur Reduzierung eines Incidents, solange keine endgültige Lösung verfügbar ist
-*	Known Error
-    *	Problem, dessen Ursache identifiziert wurde und ein Workaround existiert
-    *   Speicherung in der Known-Error-Datenbank
-*	Known Error Database
-    *	Beinhaltet alle dokumentierten Known Errors und dazugehörige Workarounds
+* **Problem**: Unbekannte Ursache eines oder mehrerer Incidents.
+* **Workaround**: Massnahme zur Reduzierung der Auswirkungen eines Incidents, solange keine endgültige Lösung verfügbar ist.
+* **Known Error**
+  * Problem, dessen Ursache identifiziert wurde und ein Workaround existiert
+  * Speicherung in der Known-Error-Datenbank
+* **Known Error Database**: Beinhaltet alle dokumentierten Known Errors und dazugehörige Workarounds.
 
 ### Aktivitäten
 
 Das Problem Management besteht grundsätzlich aus zwei wesentlichen Prozessbereichen:
-*	Proaktives Problem Management
-Befasst sich mit der Identifikation von Schwachstellen und der Vermeidung möglicher zukünftiger Probleme und Störungen.
-*	Reaktives Problem Management
-Befasst sich mit der Identifikation, Analyse und Beseitigung von Problemen.
+
+_Proaktives Problem Management_, befasst sich mit der Identifikation von Schwachstellen und der Vermeidung möglicher zukünftiger Probleme und Störungen.  
+_Reaktives Problem Management_, befasst sich mit der Identifikation, Analyse und Beseitigung von Problemen.
 
 ![Incident Management Prozesse](problem_management_activities.png){ width=50% }
 
-*	Problem-Erkennung (Problem detection)
-    *   Für einen erfolgreichen Prozess müssen die Probleme zuerst als solche erkannt werden
-    *	Es gibt verschiedenste Wege zur Erkennung. Beispiele sind: Erfahrung des Service Desks, nachgelagerte Analysen von Incidents, Überwachung des automatisierten Monitorings
-*	Problem-Aufzeichnung (Problem logging)
-    *   Für die Bearbeitung relevante Daten werden im Problem Record erfasst und fortlaufend aktualisiert
-*	Kategorisierung
-    *   Damit eine effektive Bearbeitung gewährleistet werden kann, muss wie beim Incident Management eine Einteilung stattfinden
-*	Priorisierung
-    *   Problems werden priorisiert, um die Reihenfolge und Geschwindigkeit der Bearbeitung den erwarteten Auswirkungen und der Dringlichkeit anzupassen
-*	Untersuchung und Diagnose (Investigation and diagnosis)
-    *   Es werden Ressourcen entsprechend der Priorisierung und Kategorisierung zusammengestellt und die Ursache diagnostiziert
-*	Known Error dokumentieren (raising a known error)
-    *   Entdeckte Workarounds werden in der Known Error Database dokumentiert und stehen anderen Prozessen zur Verfügung
-*	Problemlösung
-    *   Identifizierte Ursachen werden bewertet – passende Lösungen werden gesucht
-    *   Festgelegte Lösungen können nun implementiert werden, sofern kein anderer Service beeinträchtig wird und Ressourcen zur Verfügung stehen
-    *   Angestrebte Lösung sollte deshalb mit einem RFC genehmigt werden
-*	Problem abschliessen
-    *   Problem Record wird aktualisiert und formal abgeschlossen
-    *   Known Error Record wird geupdatet
-    *	Verlinkte Incident Tickets werden ebenfalls geschlossen
+* **Problem-Erkennung (Problem detection)**
+  * Für einen erfolgreichen Prozess müssen die Probleme zuerst als solche erkannt werden
+  * Es gibt verschiedenste Wege zur Erkennung. Beispiele sind: Erfahrung des Service Desks, nachgelagerte Analysen von Incidents, Überwachung des automatisierten Monitorings
+* **Problem-Aufzeichnung (Problem logging)**: Für die Bearbeitung relevante Daten werden im Problem Record erfasst und fortlaufend aktualisiert
+* **Kategorisierung**: Damit eine effektive Bearbeitung gewährleistet werden kann, muss wie beim Incident Management eine Einteilung stattfinden
+* **Priorisierung**: Problems werden priorisiert, um die Reihenfolge und Geschwindigkeit der Bearbeitung den erwarteten Auswirkungen und der Dringlichkeit anzupassen
+* **Untersuchung und Diagnose (Investigation and diagnosis)**: Es werden Ressourcen entsprechend der Priorisierung und Kategorisierung zusammengestellt und die Ursache diagnostiziert
+* **Known Error dokumentieren (raising a known error)**: Entdeckte Workarounds werden in der Known Error Database dokumentiert und stehen anderen Prozessen zur Verfügung
+* **Problemlösung**
+  *   Identifizierte Ursachen werden bewertet – passende Lösungen werden gesucht
+  *   Festgelegte Lösungen können nun implementiert werden, sofern kein anderer Service beeinträchtig wird und Ressourcen zur Verfügung stehen
+  *   Angestrebte Lösung sollte deshalb mit einem RFC genehmigt werden
+* **Problem abschliessen**
+  *   Problem Record wird aktualisiert und formal abgeschlossen
+  *   Known Error Record wird geupdatet
+  * Verlinkte Incident Tickets werden ebenfalls geschlossen
 
 ### Rollen
 
-*	Problem Manager
-    *   Verantwortlich für einen funktionierenden Prozess, Effektivität und Effizienz
-    *   Weitere Aufgaben: Management Reporting, Pflege der Knowns Error Database, Formaler Abschluss der Problem Records etc.
-*	Problem Solving Groups
-    *	Werden in Bezug zum jeweiligen Problem vom Problem Manager zusammengestellt und führen Diagnose und Lösungssuche durch
-    *   Bestehen aus internen und externen Spezialisten
+* **Problem Manager**
+  * Verantwortlich für einen funktionierenden Prozess, Effektivität und Effizienz
+  * Weitere Aufgaben: Management Reporting, Pflege der Knowns Error Database, Formaler Abschluss der Problem Records etc.
+* **Problem Solving Groups**
+  * Werden in Bezug zum jeweiligen Problem vom Problem Manager zusammengestellt und führen Diagnose und Lösungssuche durch
+  * Bestehen aus internen und externen Spezialisten
 
 ### Key-Performance Indikatoren (KPI)
 
 Beispiele für mögliche Kennzahlen sind:
-*	Anzahl der identifizierten Problems
-*	Anteil der in der vorgesehenen Zeit gelösten Problems
-*	Anteil offener Problem Records, die auf Bearbeitung warten
-*	Durchschnittliche Kosten je Problem (ggf. auch je Kategorie)
-*	Reduzierung der Anzahl der Incidents
-*	Anteil der Problems, für die ein Known Error dokumentiert wurde
+
+* Anzahl der identifizierten Problems
+* Anteil der in der vorgesehenen Zeit gelösten Problems
+* Anteil offener Problem Records, die auf Bearbeitung warten
+* Durchschnittliche Kosten je Problem (ggf. auch je Kategorie)
+* Reduzierung der Anzahl der Incidents
+* Anteil der Problems, für die ein Known Error dokumentiert wurde
 
 ### Herausforderungen
 
