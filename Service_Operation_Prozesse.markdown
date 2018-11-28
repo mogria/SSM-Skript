@@ -33,10 +33,10 @@ den gesamten Lebenszyklus aller Incidents. Wichtige Begriffe sind:
     * Ausfall einer Hard-Disk im RAID (auch ohne Service Unterbruch)
   In der Praxis entspricht dies einem Ticket.
 
-  Wiedereröffnung eines Tickets will man Grundsätzlich vermeiden. Jedoch
+  Wiedereröffnung eines Tickets will man grundsätzlich vermeiden. Jedoch
   können Situationen in der Praxis auftreten, in denen dies
-  Sinnvoll ist. Es benötigt, jedoch klare Regeln, wann ein Incident
-  wiedereröffnet wird & wann es sich um einen neuen Incident handelt.
+  sinnvoll ist. Es benötigt, jedoch klare Regeln, wann ein Incident
+  wiedereröffnet wird und wann es sich um einen neuen Incident handelt.
 
 * **Major Incident**:
   Im Gegensatz zu einfachen Incidents haben diese besonders grosse
@@ -44,9 +44,9 @@ den gesamten Lebenszyklus aller Incidents. Wichtige Begriffe sind:
   Massnahmen bei der Service-Wiederherstellung.
 
 * **Workarounds**:
-  siehe Problem Management.
+  Siehe Problem Management.
 
-* **Timescales**: Anhand des SLAs werden für die einzellnen Aktivitäten eines Indicents Zeiten vereinbart, welche im OLA festgehalten werden.
+* **Timescales**: Anhand des SLAs werden für die einzelnen Aktivitäten eines Indicents Zeiten vereinbart, welche im OLA festgehalten werden.
 
 * **Incident Models**:
   Vordefinierte Vorgehensweise für eine bestimmte Art von ähnlichen oder auch gleichen Incidents.
@@ -56,20 +56,20 @@ den gesamten Lebenszyklus aller Incidents. Wichtige Begriffe sind:
 
 * **2st Line Support**
   Sind Spezialisten die über ausgeprägte Fachkenntnisse über ein
-  bestimmtes Thema Verfügen.
+  bestimmtes Thema verfügen.
   Incidents werden vom Service Desk zuerst hierher eskaliert.
 
 * **3rd Line Support**
-  Ist die nächste Stufe der eskalation, wenn der 2nd Line Support
-  ein Incident weiterleiter. Es handelt sich hier um noch weiter
+  Ist die nächste Stufe der Eskalation, wenn der 2nd Line Support
+  ein Incident weiterleitet. Es handelt sich hier um noch weiter
   spezialisierte Teams. Es kann aber auch ein externer Dienstleister
   oder der Hersteller eines Produkts sein.
 
 ### Abgrenzung zum Problem Management
 
-Ein Incident bleibt immer ein Incident, auch ein Major Incident. Es werden nur Symptome und Auswirkungen mittels eines Workarounds behoben. Sie werden höchstens zu einem Problem zugewiesen, welches die Grundlegende Ursache für ein oder mehrere Incidents ist.
+Ein Incident bleibt immer ein Incident, auch ein Major Incident. Es werden nur Symptome und Auswirkungen mittels eines Workarounds behoben. Sie werden höchstens zu einem Problem zugewiesen, welches die grundlegende Ursache für ein oder mehrere Incidents ist.
 
-Jedoch ist es sehr wichtig für einen funkionierenden Incident Management Prozess, dass Informationen wie Errors & Workarrounds aus dem Problem Management Prozess zur Verfügung stehen, um aus Vergangenen Incidents zu lernen und sinnvolle Workarounds einzusetzen.
+Jedoch ist es sehr wichtig für einen funktionierenden Incident Management Prozess, dass Informationen wie Errors und Workarrounds aus dem Problem Management Prozess zur Verfügung stehen, um aus vergangenen Incidents zu lernen und sinnvolle Workarounds einzusetzen.
 
 ### Aktivitäten
 
@@ -78,9 +78,9 @@ Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen 
 ![Incident Management Prozesse](incident_management_activities.png){ width=50% }
 
 1. **Incident tritt auf**:
-  Das ein Incident auftritt heisst nicht umbedingt, dass dieser direkt auch identifiziert wird!
+  Wenn ein Incident auftritt, heisst nicht umbedingt, dass dieser direkt auch identifiziert wird!
 2. **Incident identifizierung**:
-  Entweder durch auftreten, oder durch eine Meldung vom Anwender / Monitoring. Je früher man Fehler entdecken kann, desto schneller können Fehler beseitigt werden & der Anwender bekommt dies im Besten Fall nicht einmal mit.
+  Entweder durch auftreten, oder durch eine Meldung vom Anwender / Monitoring. Je früher man Fehler entdecken kann, desto schneller können Fehler beseitigt werden & der Anwender bekommt dies im besten Fall nicht einmal mit.
 3. **Incident Aufzeichnung**:
   Alle Incidents sollen aufgezeichnet werden, da dies wichtig ist für den ganzen Prozess wie auch zur Messung der Prozess-Performance. Dies soll beinhalten:
     * Zeit/Datum der Erfassung & Abschluss
@@ -91,7 +91,7 @@ Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen 
     * Name des Erfassers und Kommunkationsart
     * Name des Benutzers und Kommunkationsart
     * Betroffene Configuration Items.
-    * Verlinke Problems / Known Errors
+    * Verlinkte Problems / Known Errors
     * Durchgeführte Massnahmen zur Behebung
     * Personenen/Rolle welcher Incident bearbeitet
 4. **Statusverfolgung**:
@@ -113,14 +113,14 @@ Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen 
   vorzunehmen.
   Die Priorisierung legt lediglich die Reihenfolge der Abarbeitung fest.
 7. **Initiale Diagnose**:
-  Nach dem erfassen des Incidents und dessen Symptome, wird direkt
+  Nach dem Erfassen des Incidents und dessen Symptome, wird direkt
   versucht eine schnelle Lösung zu finden. Dies ist z.B. der Job
   des Service Desks, der noch direkt am Telefon mit dem Kunden
   versucht durch z.B. Fragebäume oder Wissensdatenbanken oder der Known
-  Error Datebase das Problem zu lösen. Im Besten Fall, wenn der Anwender
+  Error Datebase das Problem zu lösen. Im besten Fall, wenn der Anwender
   die Lösung akzeptiert, kann der Incident direkt abgeschlossen werden.
 8. **Eskalation**:
-  Bei des Eskalation handelt es sich um weitergabe des Incidents an eine andere Instanz um dort jeweils weitere Aktivitäten durchzuführen. Es wird hier grundsätzlich zwischen zwei Arten unterschieden.  
+  Bei des Eskalation handelt es sich um Weitergabe des Incidents an eine andere Instanz, um dort jeweils weitere Aktivitäten durchzuführen. Es wird hier grundsätzlich zwischen zwei Arten unterschieden.  
   _Funktionale Eskalation_:
     Weitergabe z.B. aufgrund von fehlendem Wissen, Fähigkeiten oder
     Experitise. Aber auch anhand der Zuständigkeit der zugewiesenen
@@ -130,26 +130,26 @@ Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen 
   _Hierarchische Eskalation_:
     Hier handelt es sich um eine Weitergabe an den übergeordneten
     Manager (Oft zuerst der Incident Manager). Dies kann im Falle eines
-    Major Incidents sein, um den Manager zu informieren. Im anderen
-    Fällen wie der Überschreitung der vorgesehenen Lösungszeit,
-    wird dies getan um weitere Massnahmen einzuleiten.
+    Major Incidents sein, um den Manager zu informieren. In anderen
+    Fällen, wie der Überschreitung der vorgesehenen Lösungszeit,
+    wird dies getan, um weitere Massnahmen einzuleiten.
 
 7. **Untersuchung und Diagnose**:
   Hier werden alle Informationen bewertet und Ereignisse identifiziert,
   welche den Incident ausgelöst haben könnten. Dies kann dazu führen,
   dass die Priorisierung des Incidents angepasst werden muss, da der
-  grad der Auswirkungen hier neu bewertet wird.
+  Grad der Auswirkungen hier neu bewertet wird.
 8. **Behebung und Wiederherstellung**:
   In dieser Aktivität werden die Massnahmen zur Wiederherstellung des
   Services durchgeführt, nachdem eine potenzielle Lösung identifiziert
   wurde. Dies kann durch den Anwender selbst, durch den Service-Desk, ein
   internes Support-Team oder sogar durch externe Lieferanten geschehen.
 9. **Incident abschliessen**
-  Hier wird durch den Service Desk sichergestellt das der Fehler wirklich
+  Hier wird durch den Service Desk sichergestellt, dass der Fehler wirklich
   behoben wurde und der Anwender die Lösung akzeptiert (Kann auch durch
   _nicht antworten_ auf ein geschlossenes Ticket geschehen). Ausserdem
-  ist es wichtig die Vollständigkeit der Dokumentation zu überprüfen,
-  evtl. die Kategorie zu korrigieren. Zudem muss bei bedarf das Problem
+  ist es wichtig, die Vollständigkeit der Dokumentation zu überprüfen,
+  evtl. die Kategorie zu korrigieren. Zudem muss bei Bedarf das Problem
   Management informiert werden, über die Notwendigkeit präventiver
   Massnahmen. Es kann auch die Anwenderzufriedenheit abgefragt werden,
   jedoch gut dosiert, da man sonst auf Unmut stossen könnte.
