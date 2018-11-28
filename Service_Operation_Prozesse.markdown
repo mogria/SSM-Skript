@@ -11,42 +11,21 @@ header-includes: |
     \floatplacement{figure}{H}
 geometry: margin=1in
 font: "Droid Sans"
-extensions: raw_html
 ---
 
-Die folgenden Service Operation Prozesse sind in ITIL definiert:
+In diesem Dokument betrachten wir die folgenden Service Operation Prozesse wie in ITIL definiert:
 
  * Incident Management
  * Request Fulfillment
  * Problem Management
  * Access Management
- * (Event Management) (Dozent Fragen, weil in Buch aber nicht Teil der Aufgabe?? Wahrscheinlich neuerer Prozess??)
-
-
-Diese werden in den jeweiligen Kapiteln später genauer erläutert.
-
-## Ziele
-
-Das Ziel von Service Operation ist die Realisierung der strategischen Ziele des Unternehmens _während der Betriebsphase der IT Services_.
-
-## Gegensätze in der Service Operation
-
-In der Service Operation gibt es grundsätzliche Gegensätze die immer wieder auftreten und in ein Gleichgewicht gebraucht werden müssen.
-
-### Interne Technologiesicht vs externe Business-Sicht
-
-### Stabilität vs Flexibilität
-
-### Qualität vs Kosten
-
-### Reaktiv vs Proaktiv
-
-Sollen wir das oben hier erwähnen?
 
 
 ## Incident Management
 
 Incident Management befasst sich mit allen Ereignissen, die einen Service stören oder beeinflussen können, und ist verantwortlich für den gesamten Lebenszyklus aller Incidents.  
+
+### Begriffe 
 
 * **Incident**  
   Ungeplante Unterbrechung oder Reduktion der Qualität eines IT-Services. Zum Beispiel:
@@ -54,7 +33,9 @@ Incident Management befasst sich mit allen Ereignissen, die einen Service störe
     * Meldungen von IT-Mitarbeitern
     * Monitoring Events
     * Ausfall einer Hard-Disk im RAID (auch ohne Service Unterbruch)
+  In der Praxis entspricht dies einem Ticket.
 
+  Wiedereröffnung
 
 * **Major Incident**  
   Im Gegensatz zu einfachen Incidents haben diese besonders grosse Auswirkungen auf die Geschäftsprozesse und bedingen besondere Massnahmen bei der Service-Wiederherstellung.
@@ -62,7 +43,10 @@ Incident Management befasst sich mit allen Ereignissen, die einen Service störe
 * **Workarounds**  
    siehe Problem Management.
 
-* **Incident Model**  
+* **Timescales**
+  Anhand des SLAs werden für die einzellnen Aktivitäten eines Indicents Zeiten vereinbart, welche im OLA festgehalten werden.
+
+* **Incident Models**  
    Vordefinierte Vorgehensweise für eine bestimmte Art von ähnlichen oder auch gleichen Incidents.
 
 ### Abgrenzung zum Problem Management
@@ -71,7 +55,9 @@ Ein Incident bleibt immer ein Incident, auch ein Major Incident. Es werden nur S
 
 ### Aktivitäten
 
-![Incident Management Prozesse](incident_management_activities.png){ width=50% }/
+Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen unterscheiden. Folgende Aktivitäten bieten aber einen guten Rahmen für die Gestaltung eines Incident Mangement Prozesses.
+
+![Incident Management Prozesse](incident_management_activities.png){ width=50% } 
 
 1. **Incident tritt auf**  
   Das ein Incident auftritt heisst nicht umbedingt, dass dieser direkt auch identifiziert wird!
@@ -90,15 +76,43 @@ Ein Incident bleibt immer ein Incident, auch ein Major Incident. Es werden nur S
     * Verlinke Problems / Known Errors
     * Durchgeführte Massnahmen zur Behebung
     * Personenen/Rolle welcher Incident bearbeitet
-* **Statusverfolgung**  
-  Der Status soll gepflegt werden & vereinfacht die Handhabung. Typische Stati sind (je nach festlegung)
-  * *Offen*: Noch nicht zugeordnet
-  * *In Arbeit*
-  * *Gelöst*: Incident wurde behoben, Lösung jedoch nicht bestätigt.
-  * *Solved*: Incident ist abgeschlossen & Lösung wurde durch Anwender bestätigt.
-* **Incident Priorisierung**  
+4. **Statusverfolgung**  
+  Der Status soll gepflegt werden & vereinfacht die Handhabung. Typische Stati sind (je nach festlegung)  
+  *Offen*: Noch nicht zugeordnet  
+  *In Arbeit*  
+  *Gelöst*: Incident wurde behoben, Lösung jedoch nicht bestätigt.  
+  *Solved*: Incident ist abgeschlossen & Lösung wurde durch Anwender bestätigt.
+5. **Kategorisierung**  
+  Eine Kategorisierung wird vorgenommen, damit der Incident von den dafür zuständigen Mitarbeitern direkt verarbeitet werden kann. Keine Kategorisierung oder eine Fehlkategorisierung kann zu Mehraufwand, z.B. durch Weiterleitungen führen. 
+6. **Priorisierung**  
   Incidents werden Priorisiert nach *Auswirkung* auf das Business des Kunden und nach *Dinglichkeit*.wie schnell der Service wieder hergestellt werden muss. Es braucht hier klare Richtlinien und Praxisbeispiele für die Mitarbeiter, um die Priorisierung korrekt vorzunehmen.  
   Die Priorisierung legt lediglich die Reihenfolge der Abarbeitung fest.
+7. **Initiale Diagnose**  
+  Nach dem erfassen des Incidents und dessen Symptome, wird direkt
+  versucht eine schnelle Lösung zu finden. Dies ist z.B. der Job
+  des First-Level-Supports, der noch direkt am Telefon mit dem Kunden
+  versucht durch z.B. Fragebäume oder Wissensdatenbanken oder der Known
+  Error Datebase das Problem zu lösen. Im Besten Fall, wenn der Anwender
+  die Lösung akzeptiert, kann der Incident direkt abgeschlossen werden.
+8. **Eskalation** 
+  Bei des Eskalation handelt es sich um weitergabe des Incidents an eine andere Instanz um dort jeweils weitere Aktivitäten durchzuführen. Es gibt 2 Arten:
+  * _Funktionale Eskalation_  
+    Weitergabe z.B. aufgrund von fehlendem Wissen, Fähigkeiten oder
+    Experitise. Aber auch anhand der Zuständigkeit der zugewiesenen
+    Kategorie. Dies ist z.B. eine Weiterleitung des 1st Level Supports
+    an den Second Level Support. Die Verwantwortung zur Bearbeitung des
+    Incidents bleibt hier aber bei der Instanz die ihn weitergeleitet hat.
+  * _Hierarchische Eskalation_  
+    Hier handelt es sich um eine Weitergabe an den übergeordneten Manager (Oft zuerst der Prozessmanager). Dies kann im Falle eines Major Incidents sein, um den Manager zu informieren. Im anderen Fällen wie der Überschreitung der vorgesehenen Lösungszeit, wird dies getan um weitere Massnahmen einzuleiten.
+
+7. **Untersuchung und Diagnose**
+  Hier werden alle Informationen bewertet und Ereignisse identifiziert, welche den Incident ausgelöst haben könnten. Dies kann dazu führen, dass die Priorisierung des Incidents angepasst werden muss, da der grad der Auswirkungen hier neu bewertet wird.
+8. **Behebung und Wiederherstellung**
+  In dieser Aktivität werden die Massnahmen zur Wiederherstellung des Services durchgeführt, nachdem eine potenzielle Lösung identifiziert wurde. Dies kann durch den Anwender selbst, durch den Service-Desk, ein internes Support-Team oder sogar durch externe Lieferanten geschehen.
+9. **Incident abschliessen**
+  Hier wird durch den Service Desk sichergestellt das der Fehler wirklich behoben wurde und der Anwender die Lösung akzeptiert (Kann auch durch _nicht antworten_ auf ein geschlossenes Ticket geschehen). Ausserdem ist es wichtig die Vollständigkeit der Dokumentation zu überprüfen, evtl. die Kategorie zu korrigieren. 
+  Zudem muss bei bedarf das Problem Management informiert werden, über die Notwendigkeit präventiver Massnahmen.
+  Es kann auch die Anwenderzufriedenheit abgefragt werden, jedoch gut dosiert, da man sonst auf Unmut stossen könnte.
 
 ## Request Fulfilment
 
@@ -203,7 +217,7 @@ Ziel des Problem Management ist die Vermeidung von Incidents. Z.B. Das die gleic
 
 ### Aktivitäten
 
-![Incident Management Prozesse](problem_management_activities.png)
+![Incident Management Prozesse](problem_management_activities.png){ width=50% }
 
 ## Access Management
 
