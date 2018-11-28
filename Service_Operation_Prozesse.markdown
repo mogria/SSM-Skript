@@ -44,13 +44,26 @@ den gesamten Lebenszyklus aller Incidents. Wichtige Begriffe sind:
   Massnahmen bei der Service-Wiederherstellung.
 
 * **Workarounds**:
-   siehe Problem Management.
+  siehe Problem Management.
 
 * **Timescales**: Anhand des SLAs werden für die einzellnen Aktivitäten eines Indicents Zeiten vereinbart, welche im OLA festgehalten werden.
 
 * **Incident Models**:
-   Vordefinierte Vorgehensweise für eine bestimmte Art von ähnlichen oder auch gleichen Incidents.
+  Vordefinierte Vorgehensweise für eine bestimmte Art von ähnlichen oder auch gleichen Incidents.
 
+* **Service Desk / 1st Line Support **:
+  Nimmt Anrufe entgegen und bearbeitet Meldungen, nach den unten definierten Aktivitäten.
+
+* **2st Line Support**
+  Sind Spezialisten die über ausgeprägte Fachkenntnisse über ein
+  bestimmtes Thema Verfügen.
+  Incidents werden vom Service Desk zuerst hierher eskaliert.
+
+* **3rd Line Support**
+  Ist die nächste Stufe der eskalation, wenn der 2nd Line Support
+  ein Incident weiterleiter. Es handelt sich hier um noch weiter
+  spezialisierte Teams. Es kann aber auch ein externer Dienstleister
+  oder der Hersteller eines Produkts sein.
 
 ### Abgrenzung zum Problem Management
 
@@ -102,7 +115,7 @@ Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen 
 7. **Initiale Diagnose**:
   Nach dem erfassen des Incidents und dessen Symptome, wird direkt
   versucht eine schnelle Lösung zu finden. Dies ist z.B. der Job
-  des First-Level-Supports, der noch direkt am Telefon mit dem Kunden
+  des Service Desks, der noch direkt am Telefon mit dem Kunden
   versucht durch z.B. Fragebäume oder Wissensdatenbanken oder der Known
   Error Datebase das Problem zu lösen. Im Besten Fall, wenn der Anwender
   die Lösung akzeptiert, kann der Incident direkt abgeschlossen werden.
@@ -111,12 +124,12 @@ Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen 
   _Funktionale Eskalation_:
     Weitergabe z.B. aufgrund von fehlendem Wissen, Fähigkeiten oder
     Experitise. Aber auch anhand der Zuständigkeit der zugewiesenen
-    Kategorie. Dies ist z.B. eine Weiterleitung des 1st Level Supports
-    an den Second Level Support. Die Verwantwortung zur Bearbeitung des
+    Kategorie. Dies ist z.B. eine Weiterleitung des Service Desk
+    an den 2nd Line Support. Die Verwantwortung zur Bearbeitung des
     Incidents bleibt hier aber bei der Instanz die ihn weitergeleitet hat.  
   _Hierarchische Eskalation_:
     Hier handelt es sich um eine Weitergabe an den übergeordneten
-    Manager (Oft zuerst der Prozessmanager). Dies kann im Falle eines
+    Manager (Oft zuerst der Incident Manager). Dies kann im Falle eines
     Major Incidents sein, um den Manager zu informieren. Im anderen
     Fällen wie der Überschreitung der vorgesehenen Lösungszeit,
     wird dies getan um weitere Massnahmen einzuleiten.
