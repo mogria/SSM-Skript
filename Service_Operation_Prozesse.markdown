@@ -95,14 +95,14 @@ Die Aktivitäten können sich grundsätzlich je nach Unternehmen und Umständen 
   Error Datebase das Problem zu lösen. Im Besten Fall, wenn der Anwender
   die Lösung akzeptiert, kann der Incident direkt abgeschlossen werden.
 8. **Eskalation** 
-  Bei des Eskalation handelt es sich um weitergabe des Incidents an eine andere Instanz um dort jeweils weitere Aktivitäten durchzuführen. Es gibt 2 Arten:
-  * _Funktionale Eskalation_  
+  Bei des Eskalation handelt es sich um weitergabe des Incidents an eine andere Instanz um dort jeweils weitere Aktivitäten durchzuführen. Es wird hier grundsätzlich zwischen zwei Arten unterschieden.
+  _Funktionale Eskalation_:
     Weitergabe z.B. aufgrund von fehlendem Wissen, Fähigkeiten oder
     Experitise. Aber auch anhand der Zuständigkeit der zugewiesenen
     Kategorie. Dies ist z.B. eine Weiterleitung des 1st Level Supports
     an den Second Level Support. Die Verwantwortung zur Bearbeitung des
-    Incidents bleibt hier aber bei der Instanz die ihn weitergeleitet hat.
-  * _Hierarchische Eskalation_  
+    Incidents bleibt hier aber bei der Instanz die ihn weitergeleitet hat.  
+  _Hierarchische Eskalation_:
     Hier handelt es sich um eine Weitergabe an den übergeordneten Manager (Oft zuerst der Prozessmanager). Dies kann im Falle eines Major Incidents sein, um den Manager zu informieren. Im anderen Fällen wie der Überschreitung der vorgesehenen Lösungszeit, wird dies getan um weitere Massnahmen einzuleiten.
 
 7. **Untersuchung und Diagnose**
@@ -144,7 +144,6 @@ Beispiele sind:
 *	Koordination der Ausführung (coordination of fulfilment activities)
     *	Tatsächliche Ausführung abhängig von der Art der Anfrage
     *	Häufig direkt durch Service-Desk-Mitarbeiter, aber es können auch weitere Personen und Rollen miteinbezogen werden (z.B. Facility Mgmt. für Umzüge)
->>>>>>> 7f8721109b963cb0ce98ecbd26571b23c8deffcd
 
 ### Aktivitäten
 Der Prozess besteht aus den folgenden Aktivitäten:
