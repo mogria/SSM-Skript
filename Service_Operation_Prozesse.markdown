@@ -247,14 +247,14 @@ Ziel des Problem Management ist die Vermeidung von Incidents. Z.B. Das die gleic
 ### Begriffe
 
 *	Problem
-*	    Unbekannte Ursache eines oder mehrerer Incidents
+    *   Unbekannte Ursache eines oder mehrerer Incidents
 *	Workaround
-*   	Massnahme zur Reduzierung eines Incidents, solange keine endgültige Lösung verfügbar ist
+    *   Massnahme zur Reduzierung eines Incidents, solange keine endgültige Lösung verfügbar ist
 *	Known Error
-*	    Problem, dessen Ursache identifiziert wurde und ein Workaround existiert
-*	    Speicherung in der Known-Error-Datenbank
+    *	Problem, dessen Ursache identifiziert wurde und ein Workaround existiert
+    *   Speicherung in der Known-Error-Datenbank
 *	Known Error Database
-*	    Beinhaltet alle dokumentierten Known Errors und dazugehörige Workarounds
+    *	Beinhaltet alle dokumentierten Known Errors und dazugehörige Workarounds
 
 ### Aktivitäten
 
@@ -267,35 +267,35 @@ Befasst sich mit der Identifikation, Analyse und Beseitigung von Problemen.
 ![Incident Management Prozesse](problem_management_activities.png){ width=50% }
 
 *	Problem-Erkennung (Problem detection)
-*      	Für einen erfolgreichen Prozess müssen die Probleme zuerst als solche erkannt werden
-*	    Es gibt verschiedenste Wege zur Erkennung. Beispiele sind: Erfahrung des Service Desks, nachgelagerte Analysen von Incidents, Überwachung des automatisierten Monitorings
+    *   Für einen erfolgreichen Prozess müssen die Probleme zuerst als solche erkannt werden
+    *	Es gibt verschiedenste Wege zur Erkennung. Beispiele sind: Erfahrung des Service Desks, nachgelagerte Analysen von Incidents, Überwachung des automatisierten Monitorings
 *	Problem-Aufzeichnung (Problem logging)
-*   	Für die Bearbeitung relevante Daten werden im Problem Record erfasst und fortlaufend aktualisiert
+    *   Für die Bearbeitung relevante Daten werden im Problem Record erfasst und fortlaufend aktualisiert
 *	Kategorisierung
-*   	Damit eine effektive Bearbeitung gewährleistet werden kann, muss wie beim Incident Management eine Einteilung stattfinden
+    *   Damit eine effektive Bearbeitung gewährleistet werden kann, muss wie beim Incident Management eine Einteilung stattfinden
 *	Priorisierung
-*   	Problems werden priorisiert, um die Reihenfolge und Geschwindigkeit der Bearbeitung den erwarteten Auswirkungen und der Dringlichkeit anzupassen
+    *   Problems werden priorisiert, um die Reihenfolge und Geschwindigkeit der Bearbeitung den erwarteten Auswirkungen und der Dringlichkeit anzupassen
 *	Untersuchung und Diagnose (Investigation and diagnosis)
-*   	Es werden Ressourcen entsprechend der Priorisierung und Kategorisierung zusammengestellt und die Ursache diagnostiziert
+    *   Es werden Ressourcen entsprechend der Priorisierung und Kategorisierung zusammengestellt und die Ursache diagnostiziert
 *	Known Error dokumentieren (raising a known error)
-*	    Entdeckte Workarounds werden in der Known Error Database dokumentiert und stehen anderen Prozessen zur Verfügung
+    *   Entdeckte Workarounds werden in der Known Error Database dokumentiert und stehen anderen Prozessen zur Verfügung
 *	Problemlösung
-*	    Identifizierte Ursachen werden bewertet – passende Lösungen werden gesucht
-*   	Festgelegte Lösungen können nun implementiert werden, sofern kein anderer Service beeinträchtig wird und Ressourcen zur Verfügung stehen
-*	    Angestrebte Lösung sollte deshalb mit einem RFC genehmigt werden
+    *   Identifizierte Ursachen werden bewertet – passende Lösungen werden gesucht
+    *   Festgelegte Lösungen können nun implementiert werden, sofern kein anderer Service beeinträchtig wird und Ressourcen zur Verfügung stehen
+    *   Angestrebte Lösung sollte deshalb mit einem RFC genehmigt werden
 *	Problem abschliessen
-*	    Problem Record wird aktualisiert und formal abgeschlossen
-*	    Known Error Record wird geupdatet
-*	    Verlinkte Incident Tickets werden ebenfalls geschlossen
+    *   Problem Record wird aktualisiert und formal abgeschlossen
+    *   Known Error Record wird geupdatet
+    *	Verlinkte Incident Tickets werden ebenfalls geschlossen
 
 ### Rollen
 
 *	Problem Manager
-*   	Verantwortlich für einen funktionierenden Prozess, Effektivität und Effizienz
-*   	Weitere Aufgaben: Management Reporting, Pflege der Knowns Error Database, Formaler Abschluss der Problem Records etc.
+    *   Verantwortlich für einen funktionierenden Prozess, Effektivität und Effizienz
+    *   Weitere Aufgaben: Management Reporting, Pflege der Knowns Error Database, Formaler Abschluss der Problem Records etc.
 *	Problem Solving Groups
-*	    Werden in Bezug zum jeweiligen Problem vom Problem Manager zusammengestellt und führen Diagnose und Lösungssuche durch
-*   	Bestehen aus internen und externen Spezialisten
+    *	Werden in Bezug zum jeweiligen Problem vom Problem Manager zusammengestellt und führen Diagnose und Lösungssuche durch
+    *   Bestehen aus internen und externen Spezialisten
 
 ### Key-Performance Indikatoren (KPI)
 
