@@ -1,13 +1,18 @@
-<head>
-<meta charset="utf-8" >
-<style>
-body {
-    font-family: "Droid Sans", Arial, sans-serif;
-};
-</style>
-</head>
-
-# Service Operation Prozesse
+---
+title: Service Operation Prozesse
+author: Elia Griffo, Moritz Küttel
+header-includes: |
+    \usepackage{fancyhdr}
+    \usepackage{wrapfig}
+    \usepackage{float}
+    \pagestyle{fancy}
+    \fancyhead[RO]{SSM}
+    \fancyfoot[CO,CE]{\thepage}
+    \floatplacement{figure}{!hb}
+geometry: margin=1in
+font: "Droid Sans"
+extensions: raw_html
+---
 
 Die folgenden Service Operation Prozesse sind in ITIL definiert:
 
@@ -41,7 +46,7 @@ Sollen wir das oben hier erwähnen?
 
 ## Incident Management
 
-Incident Management befasst sich mit allen Ereignissen, die einen Service stören oder beeinflussen können, und ist verantwortlich für den gesamten Lebenszyklus aller Incidents.
+Incident Management befasst sich mit allen Ereignissen, die einen Service stören oder beeinflussen können, und ist verantwortlich für den gesamten Lebenszyklus aller Incidents.  
 
 * **Incident**  
   Ungeplante Unterbrechung oder Reduktion der Qualität eines IT-Services. Zum Beispiel:
@@ -66,7 +71,8 @@ Ein Incident bleibt immer ein Incident, auch ein Major Incident. Es werden nur S
 
 ### Aktivitäten
 
-![Incident Management Prozesse](incident_management_activities.png)
+![Incident Management Prozesse](incident_management_activities.png){ width=50% }\ 
+
 
 1. **Incident tritt auf**  
   Das ein Incident auftritt heisst nicht umbedingt, dass dieser direkt auch identifiziert wird!
@@ -94,6 +100,7 @@ Ein Incident bleibt immer ein Incident, auch ein Major Incident. Es werden nur S
 * **Incident Priorisierung**  
   Incidents werden Priorisiert nach *Auswirkung* auf das Business des Kunden und nach *Dinglichkeit*.wie schnell der Service wieder hergestellt werden muss. Es braucht hier klare Richtlinien und Praxisbeispiele für die Mitarbeiter, um die Priorisierung korrekt vorzunehmen.  
   Die Priorisierung legt lediglich die Reihenfolge der Abarbeitung fest.
+
 
 ## Request Fulfillment
 
@@ -128,9 +135,8 @@ Das Access Management ist Verantwortlich für die Verwaltung der Zugriffsrechte.
   * **Aktivitäten**
     * Verifikation der Identität  
       Um Rechte vergeben zu können, muss erst die Identität des Benutzers verifiziert werden.
-      * Ist der Anwender derjenige der er vorgibt zu sein?
-        * Wird z.B. überprüft über Benutzername/Passwort, oder SmartCards
-      * Darf er die Angeforderten Berechtigungen erhalten?
+      Ist der Anwender derjenige der er vorgibt zu sein? Wird z.B. überprüft über Benutzername/Passwort, oder SmartCards
+      Darf er die Angeforderten Berechtigungen erhalten?
 
     * Überwachung des Identiätsstatus  
       Die Rolle eines Mitarbeiters innerhalb einer Organisation kann sich ändern oder der Mitarbeiter kann auch die Organisation verlassen.
@@ -138,10 +144,10 @@ Das Access Management ist Verantwortlich für die Verwaltung der Zugriffsrechte.
 * **Rechte**  
   ...
   * **Aktivitäten**
-    * Rechte vergeben
-      * Autorisierten Benutzern wird Zugriff auf Services oder Daten gewährt.
+    * Rechte vergeben  
+      Autorisierten Benutzern wird Zugriff auf Services oder Daten gewährt.
     * Rechte entfernen oder einschränken
-      *
+      
 
 * **Zugriff**  
   ...
@@ -151,10 +157,6 @@ Das Access Management ist Verantwortlich für die Verwaltung der Zugriffsrechte.
     * Protokollieren und Überwachen  
       Die Vergebenen Rechte und deren Nutzung wird aktiv überwacht, um Missbrauch oder Veränderungungen
       in der Organisation, sollen die Berechtigungen dementsprechend entzogen oder angepasst werden.
-
-
-
-
 
 
 
